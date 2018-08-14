@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  entitlements.api:
+    image: ${DOCKER_REGISTRY}entitlementsapi
+    build:
+      context: .
+      dockerfile: entitlements.api/Dockerfile
