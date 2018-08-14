@@ -5,12 +5,13 @@ using System.Threading.Tasks;
 
 namespace entitlements.api.Models
 {
-    public class CustomerDto
+    public class PoolDto
     {
         public int Id { get; set; }
         public int SubsId { get; set; }
-        public string Name { get; set; }
 
-        public virtual List<SubscriptionDto> Subscriptions { get; set; }
+        public virtual SubscriptionDto Subscription { get; set; }
+
+        public virtual List<FullfillmentBucketDto> FullfillmentBuckets { get; set; }
     }
 }

@@ -10,5 +10,9 @@ namespace entitlements.api.Models
         public string LicenseId { get; set; }
         public string EntitlementId { get; set; }
 
+        public virtual CustomerDto Customer { get; set; }
+
+        public virtual List<PoolDto> { get; set; }
+
     }
 }
