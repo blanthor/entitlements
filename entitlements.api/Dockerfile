@@ -16,7 +16,7 @@ RUN dotnet publish entitlements.api.csproj -c Release -o /app
 
 # docker build --target publish -t entitlements:latest .
 
-FROM base AS final
+FROM base AS final	
 WORKDIR /app
 COPY --from=publish /app .
 ENTRYPOINT ["dotnet", "entitlements.api.dll"]
