@@ -5,12 +5,10 @@ using System.Threading.Tasks;
 
 namespace entitlements.api.Models
 {
-    public class CustomerDto
+    public class License
     {
         public int Id { get; set; }
+        public Guid Fguid { get; set; }
         public int SubsId { get; set; }
-        public string Name { get; set; }
-
-        public virtual List<SubscriptionDto> Subscriptions { get; set; }
     }
 }

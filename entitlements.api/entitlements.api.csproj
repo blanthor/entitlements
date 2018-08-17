@@ -7,12 +7,34 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\Customer.cs" />
+    <Compile Remove="Models\Entitlement.cs" />
+    <Compile Remove="Models\FullfillmentBucket.cs" />
+    <Compile Remove="Models\License.cs" />
+    <Compile Remove="Models\Pool.cs" />
+    <Compile Remove="Models\Subscription.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="logs\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\entitlements.data\entitlements.data.csproj" />
+    <ProjectReference Include="..\entitlements.domain\entitlements.domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\PublishProfiles\entitlementsapi20180816015335 - Web Deploy.pubxml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

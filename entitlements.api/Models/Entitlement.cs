@@ -5,14 +5,14 @@ using System.Threading.Tasks;
 
 namespace entitlements.api.Models
 {
-    public class EntitlementDto
+    public class Entitlement
     {
         public string LicenseId { get; set; }
         public string EntitlementId { get; set; }
 
-        public virtual CustomerDto Customer { get; set; }
+        public Customer Customer { get; set; }
 
-        public virtual List<PoolDto> { get; set; }
+        public List<Pool> Pools{ get; set; }
 
     }
 }
